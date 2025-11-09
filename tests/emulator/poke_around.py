@@ -40,7 +40,7 @@ def run(d):
     d('input text "exit"')
     d.ui.press('enter')
 
-    nod = d.app('com.termux.nix')
+    nod = d.app('bara.nu10')
     nod.launch()
     screenshot(d, 're-login')
     wait_for(d, 'Installing new login-inner...')
@@ -72,7 +72,7 @@ def run(d):
         d('input text "exit"')
         d.ui.press('enter')
         screenshot(d, f'pre-re-login-{descr}')
-        d.app('com.termux.nix').launch()
+        d.app('bara.nu10').launch()
         time.sleep(1)
         screenshot(d, f'post-re-login-{descr}')
 

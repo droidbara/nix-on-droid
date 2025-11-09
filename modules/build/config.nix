@@ -43,7 +43,7 @@ with lib;
 
   config = {
 
-    build.installationDir = "/data/data/com.termux.nix/files/usr";
+    build.installationDir = "/data/user/10/bara.nu10/files/usr";
 
   };
 

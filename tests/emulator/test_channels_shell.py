@@ -4,7 +4,7 @@ import sys
 
 from common import screenshot, wait_for
 
-STD = '/data/data/com.termux.nix/files/home/.cache/nix-on-droid-self-test'
+STD = '/data/user/10/bara.nu10/files/home/.cache/nix-on-droid-self-test'
 
 
 def run(d):
@@ -15,14 +15,14 @@ def run(d):
     screenshot(d, 'pre-relogin')
     d.ui.press('enter')
 
-    nod = d.app('com.termux.nix')
+    nod = d.app('bara.nu10')
     nod.launch()
     d.ui.press('enter')
     screenshot(d, 'post-relogin')
     wait_for(d, 'bash-5.2$')
 
     # run tests in a way that'd display progress in CI
-    user = d.su('stat -c %U /data/data/com.termux.nix').output.strip()
+    user = d.su('stat -c %U /data/user/10/bara.nu10').output.strip()
     # WARNING: assumes `su 0` style `su` that doesn't support -c from now on
     print(f'{user=}')
     sys.stdout.flush()
@@ -31,12 +31,12 @@ def run(d):
         'id',
         f'mkdir -p {STD}',
         f'touch {STD}/confirmation-granted',
-        '/data/data/com.termux.nix/files/usr/bin/login echo test',
-        '/data/data/com.termux.nix/files/usr/bin/login id',
-        ('cd /data/data/com.termux.nix/files/home; '
+        '/data/user/10/bara.nu10/files/usr/bin/login echo test',
+        '/data/user/10/bara.nu10/files/usr/bin/login id',
+        ('cd /data/user/10/bara.nu10/files/home; '
          'pwd; '
          'id; '
-         'env PATH= /data/data/com.termux.nix/files/usr/bin/login '
+         'env PATH= /data/user/10/bara.nu10/files/usr/bin/login '
          ' nix-on-droid on-device-test'),
     ]:
         print(f'running {cmd} as {user} with capture:')

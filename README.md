@@ -2,7 +2,7 @@
 
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
     alt="Get it on F-Droid"
-    height="80">](https://f-droid.org/packages/com.termux.nix)
+    height="80">](https://f-droid.org/packages/bara.nu10)
 
 Nix package manager on Android, in a single-click installable package. This is
 not full [NixOS](https://nixos.org/) running inside Android, but you get easy
@@ -35,7 +35,7 @@ and it's not an easy feat to pull off.
 
 ## Try it out
 
-[Install it from F-Droid](https://f-droid.org/packages/com.termux.nix),
+[Install it from F-Droid](https://f-droid.org/packages/bara.nu10),
 launch the app, press OK,
 expect many hundreds megabytes of downloads to happen.
 

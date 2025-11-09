@@ -4,7 +4,7 @@ import time
 
 
 def run(d):
-    nod = d.app('com.termux.nix', url=APK)
+    nod = d.app('bara.nu10', url=APK)
     nod.permissions.allow_notifications()
     nod.launch()
     time.sleep(.5)
