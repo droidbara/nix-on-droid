@@ -12,7 +12,7 @@ let
   defaultNixOnDroidChannel = "https://github.com/nix-community/nix-on-droid/archive/${defaultNixOnDroidBranch}.tar.gz";
 
   defaultNixpkgsFlake = "github:NixOS/nixpkgs/${defaultNixpkgsBranch}";
-  defaultNixOnDroidFlake = "github:nix-community/nix-on-droid/${defaultNixOnDroidBranch}";
+  defaultNixOnDroidFlake = "github:droidbara/nix-on-droid/master";
 in
 
 {

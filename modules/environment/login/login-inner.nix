@@ -42,18 +42,8 @@ writeText "login-inner" ''
       export NIX_SSL_CERT_FILE=${cacert}
 
       echo
-      echo "Nix-on-Droid can be set up with channels or with flakes (still experimental)."
-      while [[ -z $USE_FLAKE ]]; do
-        read -r -p "Do you want to set it up with flakes? (y/N) " flakes
-
-        if [[ "$flakes" =~ ^[Yy]$ ]]; then
-          USE_FLAKE=1
-        elif [[ "$flakes" =~ ^[Nn]$ || -z "$flakes" ]]; then
-          USE_FLAKE=0
-        else
-          echo "Received invalid input '$flakes', please try again."
-        fi
-      done
+      echo "Nix-on-Droid distributed by droid bara supports only with flakes."
+      export USE_FLAKE=1
 
       if [[ "$USE_FLAKE" == 0 ]]; then
 
